@@ -1,0 +1,11 @@
+/**
+  * Converting JDE dates to regular dates in Excel
+  * Change JDEDATE below to the cell that contains the date you wish to convert
+*/
+=DATE(LEFT(JDEDATE,3),1,RIGHT(JDEDATE,3))
+
+/**
+  * Converting regular dates to JDE dates in Excel
+  * Change REGDATE below to the cell that contains the date you wish to convert
+*/
+=(YEAR(REGDATE)-1900)*1000+REGDATE-DATE(YEAR(REGDATE),1,1)+1
